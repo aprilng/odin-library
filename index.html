@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logos/favicon.ico">
+    <title>Reader Library</title>
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="logo">
+            <img src="images/logos/logo.svg" alt="Reader Library logo" />
+        </a>
+
+        <ul>
+            <li><a class="nav-item" href="#">My Library</a></li>
+            <li><a class="nav-item" href="#">Discover</a></li>
+            <li><a class="nav-item" href="#">Settings</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <header>My Library</header>
+
+        <main>
+            <button class="add">Add Book</button>
+
+            <div class="list">
+                <div class="card">
+                    <div class="thumbnail-container">
+                        <button class="remove" aria-label="Close">
+                            <img src="images/remove.svg" alt="Remove" class="remove-icon"/>
+                        </button>
+                        <div class="image-container">
+                            <img src="images/thumbnails/to-kill-a-mockingbird.jpg" class="thumbnail" alt="To Kill a Mockingbird cover"/>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h2>To Kill a Mockingbird</h2>
+                        <p class="author">Harper Lee</p>
+                        <p class="page">323 pages</p>
+                        <div class="dropdown" data-status="no">
+                            <button class="read">Read
+                                <img src="images/arrow-drop-down.svg" alt="Dropdown arrow" class="arrow-icon"/>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-item" data-value="yes">Yes</div>
+                                <div class="dropdown-item" data-value="no">No</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="thumbnail-container">
+                        <button class="remove" aria-label="Remove">
+                            <img src="images/remove.svg" alt="Remove" class="remove-icon"/>
+                        </button>
+                        <div class="image-container">
+                            <img src="images/thumbnails/the-great-gatsby.jpg" class="thumbnail" alt="The Great Gatsby cover"/>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h2>The Great Gatsby</h2>
+                        <p class="author">F. Scott Fitzgerald</p>
+                        <p class="page">180 pages</p>
+                        <div class="dropdown" data-status="yes">
+                            <button class="read">Read
+                                <img src="images/arrow-drop-down.svg" alt="Dropdown arrow" class="arrow-icon"/>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-item" data-value="yes">Yes</div>
+                                <div class="dropdown-item" data-value="no">No</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="thumbnail-container">
+                        <button class="remove" aria-label="Remove">
+                            <img src="images/remove.svg" alt="Remove" class="remove-icon"/>
+                        </button>
+                        <div class="image-container">
+                            <img src="images/thumbnails/the-catcher-in-the-rye.jpg" class="thumbnail" alt="The Catcher in the Rye cover"/>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h2>The Catcher in the Rye</h2>
+                        <p class="author">J.D. Salinger</p>
+                        <p class="page">277 pages</p>
+                        <div class="dropdown" data-status="no">
+                            <button class="read">Read
+                                <img src="images/arrow-drop-down.svg" alt="Dropdown arrow" class="arrow-icon"/>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-item" data-value="yes">Yes</div>
+                                <div class="dropdown-item" data-value="no">No</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- New book form -->
+    <div class="new-book-form">
+        <h2>Add a New Book</h2>
+        <form id="add-book-form">
+            <label for="book-title">Book Title:</label>
+            <input type="text" id="book-title" required />
+            <label for="book-author">Author:</label>
+            <input type="text" id="book-author" required />
+            <label for="book-pages">Number of Pages:</label>
+            <input type="number" id="book-pages" required />
+            <label for="cover-input">Cover Image:</label>
+            <input type="file" name="cover" accept="image/*" id="cover-input">
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
