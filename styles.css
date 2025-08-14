@@ -155,6 +155,7 @@ main {
     height: 400px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -308,4 +309,16 @@ main {
 
 .field {
     height: 28px;
+}
+
+.submit {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    border: 1px solid var(--color-text-primary);
+    font-weight: bold;
+}
+
+.submit:hover {
+    background-color: var(--primary-bg-hover);
+    color: var(--primary-text);
 }
