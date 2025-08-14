@@ -75,7 +75,7 @@ ul {
 }
 
 .nav-item:hover,
-.nav-item:focus {
+.nav-item.active {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 0.5rem;
     font-weight: bold;

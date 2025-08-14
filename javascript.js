@@ -64,3 +64,16 @@ form.addEventListener('submit', (e) => {
 
         document.querySelector('.form-container').classList.remove('open');
 });
+
+//Close form
+document.querySelector('.close').addEventListener('click', () => {
+  document.querySelector('.form-container').style.display = 'none';
+});
+
+//Remove book
+list.addEventListener('click', (e) => {
+  if (e.target.closest('.remove')) {
+    const card = e.target.closest('.card');
+    card.remove();
+  }
+});
