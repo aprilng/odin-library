@@ -17,31 +17,14 @@ document.querySelectorAll('.dropdown').forEach(dropdown => {
     });
 });
 
-document.addEventListener('click', (e) => {
-  const clickedReadBtn = e.target.closest('.read');
-
-  document.querySelectorAll('.dropdown').forEach(dropdown => {
-    const readBtn = dropdown.querySelector('.read');
-
-    if (clickedReadBtn && dropdown === clickedReadBtn.closest('.dropdown')) {
-      // Toggle the clicked dropdown
-      const isOpen = dropdown.classList.toggle('show');
-      
-      // Update button style
-      if (isOpen) {
-        readBtn.classList.add('active');
-      } else {
-        readBtn.classList.remove('active');
-      }
+document.querySelectorAll('.read').forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.dataset.status === 'yes') {
+      button.dataset.status = 'no';
+      button.textContent = 'Not Read';
     } else {
-      // Close all other dropdowns
-      dropdown.classList.remove('show');
-      readBtn.classList.remove('active');
+      button.dataset.status = 'yes';
+      button.textContent = 'Read';
     }
   });
 });
-
-
-
-
-

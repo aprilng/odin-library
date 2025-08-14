@@ -211,77 +211,28 @@ main {
     margin-top: 0.5rem;
 }
 
-.read.active {
+.read[data-status="no"] {
+  background-color: rgba(255, 255, 255, 1);
+  color: var(--color-text-primary);
+  border: 1px solid var(--inherit-outline-border);
+}
+
+.read:hover[data-status="no"] {
+  background-color: var(--inherit-outline-hover-bg);
+  color: var(--inherit-outline-hover-text);
+  border: 1px solid var(--inherit-outline-hover-border);
+}
+
+.read[data-status="yes"] {
   background-color: var(--success-bg);
   color: var(--success-text);
   border: 1px solid var(--success-bg);
 }
 
-
-/*
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown[data-status="no"] .read {
-    background-color: rgba(255, 255, 255, 1);
-    color: var(--inherit-outline-text);
-    border: 1px solid var(--inherit-outline-border);
-}
-
-.dropdown[data-status="no"] .read:hover {
-    background-color: var(--inherit-outline-hover-bg);
-    color: var(--inherit-outline-text);
-    border: 1px solid var(--inherit-outline-hover-border);
-}
-
-.dropdown[data-status="yes"] .read {
-    border: var(--success-bg);
-    background-color: var(--success-bg);
-    color: var(--success-text);
-}
-
-.dropdown[data-status="yes"] .read:hover {
-    background-color: var(--success-bg-hover);
-    color: var(--success-text);
-}
-*/
-
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 110%;
-  left: 0;
-  background: rgba(255, 255, 255, 1);
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  min-width: 100px;
-  z-index: 10;
-}
-
-.dropdown-item {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-
-.dropdown-item:hover {
-  background-color: #eee;
-}
-
-.dropdown.show .dropdown-menu {
-  display: block;
-}
-
-.arrow-icon {
-    width: 18px;
-    height: 18px;
-    filter: invert(0%) sepia(0%) saturate(7473%) hue-rotate(172deg) brightness(107%) contrast(108%);
-}
-
-.dropdown[data-status="yes"] .read >.arrow-icon {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+.read:hover[data-status="yes"] {
+  background-color: var(--success-bg-hover);
+  color: var(--success-text);
+  border: 1px solid var(--success-bg-hover);
 }
 
 .new-book-form {
